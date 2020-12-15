@@ -1,0 +1,377 @@
+<div class="container">
+  <br>
+
+  <form [formGroup]="formGroup"> 
+    <h2 style="text-align: center;">Registro de hoja de vida <i class="fas fa-clipboard-list" style="color:  rgb(74, 195, 64);"></i></h2>
+
+    <h2>Datos básicos</h2>
+    <hr>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <label>identificacion <i class="fas fa-id-card" style="color:  rgb(74, 195, 64);"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé número de cédula..."
+            formControlName="identificacion"
+            [ngClass]="{ 'is-invalid': control.identificacion.errors && control.identificacion.touched}"
+            [(ngModel)]="hojaDeVida.identificacion"
+          >
+          <div *ngIf="control.identificacion.errors  && control.identificacion.touched" class="invalid-feedback">
+            <div *ngIf="control.identificacion.errors.required">Se requiere identificación.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>Nombre <i class="fas fa-pen-alt" style="color:  rgb(74, 195, 64);"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé su nombre..."
+            formControlName="nombre"
+            [ngClass]="{ 'is-invalid': control.nombre.errors && control.nombre.touched}"
+            [(ngModel)]="hojaDeVida.nombre"
+          >
+          <div *ngIf="control.nombre.errors && control.nombre.touched" class="invalid-feedback">
+            <div *ngIf="control.nombre.errors.required">Se requiere nombre.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>Primer apellido <i class="fas fa-pen-alt" style="color:  rgb(74, 195, 64);"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé su primer apellido..."
+            formControlName="primerApellido"
+            [ngClass]="{ 'is-invalid': control.primerApellido.errors && control.primerApellido.touched}"
+            [(ngModel)]="hojaDeVida.primerApellido"
+          >
+          <div *ngIf="control.primerApellido.errors && control.primerApellido.touched" class="invalid-feedback">
+            <div *ngIf="control.primerApellido.errors.required">Se requiere su primer apellido.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>Segundo apellido <i class="fas fa-pen-alt" style="color:  rgb(74, 195, 64);"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé su segundo apellido..."
+            formControlName="segundoApellido"
+            [ngClass]="{ 'is-invalid': control.segundoApellido.errors && control.segundoApellido.touched}"
+            [(ngModel)]="hojaDeVida.segundoApellido"
+          >
+          <div *ngIf="control.segundoApellido.errors && control.segundoApellido.touched" class="invalid-feedback">
+            <div *ngIf="control.segundoApellido.errors.required">Se requiere su segundo apellido.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <label>Fecha de nacimiento <i class="fas fa-calendar-check" style="color:  rgb(74, 195, 64);"></i></label>
+          <input type="date" class="form-control" placeholder="Ingresé su fecha de nacimiento..."
+            formControlName="fechaDeNacimiento"
+            [ngClass]="{ 'is-invalid': control.fechaDeNacimiento.errors && control.fechaDeNacimiento.touched}"
+            [(ngModel)]="hojaDeVida.fechaDeNacimiento"
+          >
+          <div *ngIf="control.fechaDeNacimiento.errors && control.fechaDeNacimiento.touched" class="invalid-feedback">
+            <div *ngIf="control.fechaDeNacimiento.errors.required">Se requiere su fecha de nacimiento.</div>
+          </div>
+        </div>
+      </div> 
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>Lugar de nacimiento <i class="fas fa-building"  style="color:  rgb(74, 195, 64);"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé su lugar de nacimiento..."
+            formControlName="lugarDeNacimiento"
+            [ngClass]="{ 'is-invalid': control.lugarDeNacimiento.errors && control.lugarDeNacimiento.touched}"
+            [(ngModel)]="hojaDeVida.lugarDeNacimiento"
+          >
+          <div *ngIf="control.lugarDeNacimiento.errors && control.lugarDeNacimiento.touched" class="invalid-feedback">
+            <div *ngIf="control.lugarDeNacimiento.errors.required">Se requiere conocer su lugar de nacimiento.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+    <h2>Contacto</h2>
+    <hr>
+    <div class="row">
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>Correo electrónico <i class="fas fa-mail-bulk" style="color:  rgb(74, 195, 64);"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé su correo electrónico..."
+            formControlName="correoElectronico"
+            [ngClass]="{ 'is-invalid': control.correoElectronico.errors && control.correoElectronico.touched}"
+            [(ngModel)]="hojaDeVida.correoElectronico"
+          >
+          <div *ngIf="control.correoElectronico.errors && control.correoElectronico.touched" class="invalid-feedback">
+            <div *ngIf="control.correoElectronico.errors.required">Se requiere su correo electrónico.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>Telefono <i class="fa fa-phone" style="color:  rgb(74, 195, 64);" aria-hidden="true"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé su telefono..."
+            formControlName="telefono"
+            [ngClass]="{ 'is-invalid': control.telefono.errors && control.telefono.touched}"
+            [(ngModel)]="hojaDeVida.telefono"
+          >
+          <div *ngIf="control.telefono.errors && control.telefono.touched" class="invalid-feedback">
+            <div *ngIf="control.telefono.errors.required">Se requiere su telefono.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>Dirección actual <i class="fa fa-street-view" style="color:  rgb(74, 195, 64);" aria-hidden="true"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé su dirección actual de domicilio..."
+            formControlName="direccionActual"
+            [ngClass]="{ 'is-invalid': control.direccionActual.errors && control.direccionActual.touched}"
+            [(ngModel)]="hojaDeVida.direccionActual"
+          >
+          <div *ngIf="control.direccionActual.errors && control.direccionActual.touched" class="invalid-feedback">
+            <div *ngIf="control.direccionActual.errors.required">Se requiere su dirección actual de domicilio.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>Ciudad actual <i class="fas fa-city" style="color:  rgb(74, 195, 64);"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé su ciudad actual..."
+            formControlName="ciudadActual"
+            [ngClass]="{ 'is-invalid': control.ciudadActual.errors && control.ciudadActual.touched}"
+            [(ngModel)]="hojaDeVida.ciudadActual"
+          >
+          <div *ngIf="control.ciudadActual.errors && control.ciudadActual.touched" class="invalid-feedback">
+            <div *ngIf="control.ciudadActual.errors.required">Se requiere su ciudad actual.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2>Académico</h2>
+    <hr>
+
+    <div class="row">
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>Estudios realizados <i class="fas fa-university" style="color:  rgb(74, 195, 64);"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé los estudios que ha realizado..."
+            formControlName="estudiosRealizados"
+            [ngClass]="{ 'is-invalid': control.estudiosRealizados.errors && control.estudiosRealizados.touched}"
+            [(ngModel)]="hojaDeVida.estudiosRealizados"
+          >
+          <div *ngIf="control.estudiosRealizados.errors && control.estudiosRealizados.touched" class="invalid-feedback">
+            <div *ngIf="control.estudiosRealizados.errors.required">Se requiere conocer los estudios que ha realizado.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>Idiomas <i class="fa fa-language" style="color:  rgb(74, 195, 64);" aria-hidden="true"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé los idiomas que maneja..."
+            formControlName="idiomas"
+            [ngClass]="{ 'is-invalid': control.idiomas.errors && control.idiomas.touched}"
+            [(ngModel)]="hojaDeVida.idiomas"
+          >
+          <div *ngIf="control.idiomas.errors && control.idiomas.touched" class="invalid-feedback">
+            <div *ngIf="control.idiomas.errors.required">Se requiere conocer los idiomas que maneja.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="row">
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>Distinciones y honores recibidos <i class="fas fa-award" style="color:  rgb(74, 195, 64);"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé las dintinciones y honores que ha recibido..."
+            formControlName="distincionesYHonoresRecibidos"
+            [ngClass]="{ 'is-invalid': control.distincionesYHonoresRecibidos.errors && control.distincionesYHonoresRecibidos.touched}"
+            [(ngModel)]="hojaDeVida.distincionesYHonoresRecibidos"
+          >
+          <div *ngIf="control.distincionesYHonoresRecibidos.errors && control.distincionesYHonoresRecibidos.touched" class="invalid-feedback">
+            <div *ngIf="control.distincionesYHonoresRecibidos.errors.required">Se requiere conocer las dintinciones y honores que ha recibido.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>Seminarios y cursos asistidos <i class="fas fa-file-signature" style="color:  rgb(74, 195, 64);"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé los seminarios y cursos a los que ha asistido..."
+            formControlName="seminariosYCursosAsistidos"
+            [ngClass]="{ 'is-invalid': control.seminariosYCursosAsistidos.errors && control.seminariosYCursosAsistidos.touched}"
+            [(ngModel)]="hojaDeVida.seminariosYCursosAsistidos"
+          >
+          <div *ngIf="control.seminariosYCursosAsistidos.errors && control.seminariosYCursosAsistidos.touched" class="invalid-feedback">
+            <div *ngIf="control.seminariosYCursosAsistidos.errors.required">Se requiere conocer los seminarios y cursos a los que ha asistido.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>Proyectos realizados <i class="fas fa-tasks" style="color:  rgb(74, 195, 64);"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé los proyectos que ha realizado..."
+            formControlName="proyectosRealizados"
+            [ngClass]="{ 'is-invalid': control.proyectosRealizados.errors && control.proyectosRealizados.touched}"
+            [(ngModel)]="hojaDeVida.proyectosRealizados"
+          >
+          <div *ngIf="control.proyectosRealizados.errors && control.proyectosRealizados.touched" class="invalid-feedback">
+            <div *ngIf="control.proyectosRealizados.errors.required">Se requiere conocer los proyectos que ha realizado.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>Experiencia laboral <i class="fas fa-briefcase" style="color:  rgb(74, 195, 64);"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé su experiencia laboral..."
+            formControlName="experienciaLaboral"
+            [ngClass]="{ 'is-invalid': control.experienciaLaboral.errors && control.experienciaLaboral.touched}"
+            [(ngModel)]="hojaDeVida.experienciaLaboral"
+          >
+          <div *ngIf="control.experienciaLaboral.errors && control.experienciaLaboral.touched" class="invalid-feedback">
+            <div *ngIf="control.experienciaLaboral.errors.required">Se requiere su experiencia laboral.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>Areas de interes para prácticas <i class="fas fa-toolbox" style="color:  rgb(74, 195, 64);"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé las areas en las que le interesa desempeñarse..."
+            formControlName="areasDeInteresParaPracticas"
+            [ngClass]="{ 'is-invalid': control.areasDeInteresParaPracticas.errors && control.areasDeInteresParaPracticas.touched}"
+            [(ngModel)]="hojaDeVida.areasDeInteresParaPracticas"
+          >
+          <div *ngIf="control.areasDeInteresParaPracticas.errors && control.areasDeInteresParaPracticas.touched" class="invalid-feedback">
+            <div *ngIf="control.areasDeInteresParaPracticas.errors.required">Se requiere conocer las areas en las que le interesa desempeñarse.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>Programa  <i class="fas fa-graduation-cap" style="color:  rgb(74, 195, 64);"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé el programa del cual es egresado..."
+            formControlName="programa"
+            [ngClass]="{ 'is-invalid': control.programa.errors && control.programa.touched}"
+            [(ngModel)]="hojaDeVida.programa"
+          >
+          <div *ngIf="control.programa.errors && control.programa.touched" class="invalid-feedback">
+            <div *ngIf="control.programa.errors.required">Se requiere el programa del cual es egresado.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2>Información adicional</h2>
+    <hr>
+
+    <div class="row">
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>Conocimiento practico de informatica <i class="fas fa-laptop-code" style="color:  rgb(74, 195, 64);"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé que conocimiento de informatica posee..."
+            formControlName="conocimientoPracticaInformatica"
+            [ngClass]="{ 'is-invalid': control.conocimientoPracticaInformatica.errors && control.conocimientoPracticaInformatica.touched}"
+            [(ngModel)]="hojaDeVida.conocimientoPracticaInformatica"
+          >
+          <div *ngIf="control.conocimientoPracticaInformatica.errors && control.conocimientoPracticaInformatica.touched" class="invalid-feedback">
+            <div *ngIf="control.conocimientoPracticaInformatica.errors.required">Se requiere saber que conocimiento de informatica posee.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>EPS <i class="fas fa-hospital" style="color:  rgb(74, 195, 64);"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé la EPS a la que pertenece..."
+            formControlName="epsActual"
+            [ngClass]="{ 'is-invalid': control.epsActual.errors && control.epsActual.touched}"
+            [(ngModel)]="hojaDeVida.epsActual"
+          >
+          <div *ngIf="control.epsActual.errors && control.epsActual.touched" class="invalid-feedback">
+            <div *ngIf="control.epsActual.errors.required">Se requiere conocer su EPS actual.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>Estado civil <i class="fas fa-ring" style="color:  rgb(74, 195, 64);"></i></label>
+          <input type="text" class="form-control" placeholder="Ingresé su estado civil..."
+            formControlName="estadoCivil"
+            [ngClass]="{ 'is-invalid': control.estadoCivil.errors && control.estadoCivil.touched}"
+            [(ngModel)]="hojaDeVida.estadoCivil"
+          >
+          <div *ngIf="control.estadoCivil.errors && control.estadoCivil.touched" class="invalid-feedback">
+            <div *ngIf="control.estadoCivil.errors.required">Se requiere su estado civil.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="form-group">
+          <label>Fecha de solicitud <i class="fas fa-calendar-check" style="color:  rgb(74, 195, 64);"></i></label>
+          <input type="date" class="form-control" placeholder="Ingresé la fecha en que realiza la solicitud..."
+            formControlName="fechaDeSolicitud"
+            [ngClass]="{ 'is-invalid': control.fechaDeSolicitud.errors && control.fechaDeSolicitud.touched}"
+            [(ngModel)]="hojaDeVida.fechaDeSolicitud"
+          >
+          <div *ngIf="control.fechaDeSolicitud.errors && control.fechaDeSolicitud.touched" class="invalid-feedback">
+            <div *ngIf="control.fechaDeSolicitud.errors.required">Se requiere conocer la fecha en que realiza la solicitud.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <hr>
+    <div class="container" style="text-align: center;">
+      <button (click)="onSubmit()" [disabled]="formGroup.invalid" type="button" class="btn btn-success">
+        Enviar hoja de vida
+      </button>
+    </div>
+    <br>
+      
+  </form>
+ 
+</div>

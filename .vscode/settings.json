@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/9bc2363a-6764-40e9-a9ac-714987b5a2d3/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/CEMPRE",
+    "appService.deploySubpath": "Vista\\publish"
+}
