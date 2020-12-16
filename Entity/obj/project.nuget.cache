@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ylz54qK+xx0HzZmOSCbm6Xm+89A6Aj3Epr4QwPGw0X5Xah/Zg8y3ip0+PzLAxI52G3MOn7a972VIV+I9mxQIHQ==",
+  "dgSpecHash": "2FQ1roVzI07j0pntZsQXHclN6/Ot6xRgPe5fATDkZANt+umbPGOgQUkVOpBeSgXXOeY8kw8Q2ODWFK7U4nhHWA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\3er corte\\Proyecto\\CEMPRE-master\\Entity\\Entity.csproj",
+  "projectFilePath": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\ProyectoClone\\3ra entraga\\CEMPRE-master\\Entity\\Entity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juan_\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
   ],

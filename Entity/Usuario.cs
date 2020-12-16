@@ -8,7 +8,9 @@ namespace Entity
         public string Identificacion { get; set; }
         public string Nombre { get; set; }
         public string CorreoElectronico { get; set; }
-        public string ClaveIngreso { get; set; }
+        public string ClaveDeIngreso { get; set; }
+        public string Token { get; set; }
+        public string Rol { get; set; }
 
     }
 }

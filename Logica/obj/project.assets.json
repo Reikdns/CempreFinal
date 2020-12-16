@@ -6790,11 +6790,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\3er corte\\Proyecto\\CEMPRE-master\\Logica\\Logica.csproj",
+      "projectUniqueName": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\ProyectoClone\\3ra entraga\\CEMPRE-master\\Logica\\Logica.csproj",
       "projectName": "Logica",
-      "projectPath": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\3er corte\\Proyecto\\CEMPRE-master\\Logica\\Logica.csproj",
+      "projectPath": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\ProyectoClone\\3ra entraga\\CEMPRE-master\\Logica\\Logica.csproj",
       "packagesPath": "C:\\Users\\juan_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\3er corte\\Proyecto\\CEMPRE-master\\Logica\\obj\\",
+      "outputPath": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\ProyectoClone\\3ra entraga\\CEMPRE-master\\Logica\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\juan_\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6810,11 +6810,11 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\3er corte\\Proyecto\\CEMPRE-master\\Datos\\Datos.csproj": {
-              "projectPath": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\3er corte\\Proyecto\\CEMPRE-master\\Datos\\Datos.csproj"
+            "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\ProyectoClone\\3ra entraga\\CEMPRE-master\\Datos\\Datos.csproj": {
+              "projectPath": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\ProyectoClone\\3ra entraga\\CEMPRE-master\\Datos\\Datos.csproj"
             },
-            "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\3er corte\\Proyecto\\CEMPRE-master\\Entity\\Entity.csproj": {
-              "projectPath": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\3er corte\\Proyecto\\CEMPRE-master\\Entity\\Entity.csproj"
+            "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\ProyectoClone\\3ra entraga\\CEMPRE-master\\Entity\\Entity.csproj": {
+              "projectPath": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\ProyectoClone\\3ra entraga\\CEMPRE-master\\Entity\\Entity.csproj"
             }
           }
         }

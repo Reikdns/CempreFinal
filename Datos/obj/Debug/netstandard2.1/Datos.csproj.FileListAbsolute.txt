@@ -22,3 +22,15 @@ C:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\3er corte\Proye
 C:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\3er corte\Proyecto\CEMPRE-master\Datos\obj\Debug\netstandard2.1\Datos.csproj.CopyComplete
 C:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\3er corte\Proyecto\CEMPRE-master\Datos\obj\Debug\netstandard2.1\Datos.dll
 C:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\3er corte\Proyecto\CEMPRE-master\Datos\obj\Debug\netstandard2.1\Datos.pdb
+C:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\ProyectoClone\3ra entraga\CEMPRE-master\Datos\bin\Debug\netstandard2.1\Datos.deps.json
+C:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\ProyectoClone\3ra entraga\CEMPRE-master\Datos\bin\Debug\netstandard2.1\Datos.dll
+C:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\ProyectoClone\3ra entraga\CEMPRE-master\Datos\bin\Debug\netstandard2.1\Datos.pdb
+C:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\ProyectoClone\3ra entraga\CEMPRE-master\Datos\bin\Debug\netstandard2.1\Entity.dll
+C:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\ProyectoClone\3ra entraga\CEMPRE-master\Datos\bin\Debug\netstandard2.1\Entity.pdb
+C:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\ProyectoClone\3ra entraga\CEMPRE-master\Datos\obj\Debug\netstandard2.1\Datos.csprojAssemblyReference.cache
+C:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\ProyectoClone\3ra entraga\CEMPRE-master\Datos\obj\Debug\netstandard2.1\Datos.AssemblyInfoInputs.cache
+C:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\ProyectoClone\3ra entraga\CEMPRE-master\Datos\obj\Debug\netstandard2.1\Datos.AssemblyInfo.cs
+C:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\ProyectoClone\3ra entraga\CEMPRE-master\Datos\obj\Debug\netstandard2.1\Datos.csproj.CoreCompileInputs.cache
+C:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\ProyectoClone\3ra entraga\CEMPRE-master\Datos\obj\Debug\netstandard2.1\Datos.csproj.CopyComplete
+C:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\ProyectoClone\3ra entraga\CEMPRE-master\Datos\obj\Debug\netstandard2.1\Datos.dll
+C:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\ProyectoClone\3ra entraga\CEMPRE-master\Datos\obj\Debug\netstandard2.1\Datos.pdb

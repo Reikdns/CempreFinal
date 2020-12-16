@@ -13,6 +13,7 @@ import { AlertModalComponent } from './CEMPRE/@base/alert-modal/alert-modal.comp
 import { InscripcionComponent } from './CEMPRE/inscripcion/inscripcion.component';
 import { UsuarioService } from './CEMPRE/services/usuario.service';
 import { HandleHttpErrorService } from './CEMPRE/@base/handle-http-error-service/handle-http-error.service';
+import { JwtInterceptor } from './CEMPRE/services/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -35,8 +36,9 @@ import { HandleHttpErrorService } from './CEMPRE/@base/handle-http-error-service
   providers: [
     CargaJsService,
     UsuarioService,
-    HandleHttpErrorService
+    HandleHttpErrorService,
+    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { }  

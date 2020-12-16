@@ -16,7 +16,7 @@ namespace Logica
 
         public Usuario Validate(string correoElectronico, string claveIngreso) 
         {
-            return _context.Usuarios.FirstOrDefault(t => t.CorreoElectronico == correoElectronico && t.ClaveIngreso == claveIngreso);
+            return _context.Usuarios.FirstOrDefault(t => t.CorreoElectronico == correoElectronico && t.ClaveDeIngreso == claveIngreso);
         }
 
         public GuardarUsuarioResponse Guardar(Usuario usuario)
@@ -80,7 +80,7 @@ namespace Logica
                     usuarioViejo.Nombre = usuarioNuevo.Nombre;
                     usuarioViejo.Identificacion = usuarioNuevo.Identificacion;
                     usuarioViejo.CorreoElectronico = usuarioNuevo.CorreoElectronico;
-                    usuarioViejo.ClaveIngreso = usuarioNuevo.ClaveIngreso;
+                    usuarioViejo.ClaveDeIngreso = usuarioNuevo.ClaveDeIngreso;
                     _context.Usuarios.Update(usuarioViejo);
                     _context.SaveChanges();
                     return ($"El registro {usuarioNuevo.Nombre} se ha modificado satisfactoriamente.");

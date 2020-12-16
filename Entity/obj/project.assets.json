@@ -115,11 +115,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\3er corte\\Proyecto\\CEMPRE-master\\Entity\\Entity.csproj",
+      "projectUniqueName": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\ProyectoClone\\3ra entraga\\CEMPRE-master\\Entity\\Entity.csproj",
       "projectName": "Entity",
-      "projectPath": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\3er corte\\Proyecto\\CEMPRE-master\\Entity\\Entity.csproj",
+      "projectPath": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\ProyectoClone\\3ra entraga\\CEMPRE-master\\Entity\\Entity.csproj",
       "packagesPath": "C:\\Users\\juan_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\3er corte\\Proyecto\\CEMPRE-master\\Entity\\obj\\",
+      "outputPath": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\ProyectoClone\\3ra entraga\\CEMPRE-master\\Entity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\juan_\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -5,6 +5,7 @@ import { Usuario } from '../models/usuario';
 import { UsuarioService } from '../services/usuario.service';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { AlertModalComponent } from '../@base/alert-modal/alert-modal.component';
+import { AuthenticationService } from '../services/authentication.service';
 
 
 @Component({
@@ -15,11 +16,14 @@ import { AlertModalComponent } from '../@base/alert-modal/alert-modal.component'
 export class LoginComponent implements OnInit {
 
   formGroup: FormGroup;
+  formGroupLogin: FormGroup;
   usuario: Usuario;
+  usuarioLogin: Usuario;
 
   constructor(private _CargaScripts: CargaJsService, private formBuilder: FormBuilder,
     private usuarioService: UsuarioService,
-    private modalService: NgbModal) {
+    private modalService: NgbModal,
+    private authtenticationService: AuthenticationService) {
 
     this._CargaScripts.cargar(["login/login"]);
     
@@ -27,15 +31,29 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.buildForm();
+    this.buildFormLogin();
   }
   
   add(){
+    this.usuario.rol = "aspirante";
     this.usuarioService.post(this.usuario).subscribe(p => {
       if (p != null) {
         const messageBox = this.modalService.open(AlertModalComponent)
         messageBox.componentInstance.title = "Resultado de registro:";
         messageBox.componentInstance.message = '¡Usuario registrado!';
         this.usuario = p;
+      }
+    });
+  }
+
+  addLogin(){
+    
+    this.authtenticationService.login(this.usuarioLogin).subscribe(p => {
+      if (p != null) {
+        const messageBox = this.modalService.open(AlertModalComponent)
+        messageBox.componentInstance.title = "Resultado de inicio de sesion:";
+        messageBox.componentInstance.message = '¡Inicio de seccion correctamente!';
+        this.usuarioLogin = p;
       }
     });
   }
@@ -55,8 +73,37 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  private buildFormLogin(){
+    this.usuarioLogin = new Usuario();
+    this.usuarioLogin.correoElectronico = '';
+    this.usuarioLogin.claveDeIngreso = '';
+    this.usuarioLogin.identificacion='';
+    this.usuarioLogin.rol='';
+    this.usuarioLogin.nombre='';
+    this.usuarioLogin.token='';
+
+
+
+    this.formGroupLogin = this.formBuilder.group({
+      correoElectronico: [this.usuarioLogin.correoElectronico,[Validators.required]],
+      claveDeIngreso: [this.usuarioLogin.claveDeIngreso, Validators.required]
+    })
+  }
+
   get control(){
     return this.formGroup.controls;
+  }
+
+  get controlLogin(){
+    return this.formGroupLogin.controls;
+  }
+
+  SumbitLogin(){
+    if(this.formGroupLogin.invalid){
+      return;
+    }
+    console.log("aaaaaaaaaaa");
+    this.addLogin();
   }
 
   onSubmit(){

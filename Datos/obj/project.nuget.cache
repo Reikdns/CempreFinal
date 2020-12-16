@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JE5hGaOolUmEb0nAi9LeOVPKFNRMiSZNM+6sccaK5GCa5j5WEeFqGYdthM68sIkm5DZvO0pkw629NY2Zs40Mlg==",
+  "dgSpecHash": "yphT9p7czoomnbpyRrO0VbSeRZM9eHaFbMLf01GnULMFBj2GOZvM4btvfJi4qYTaMzMfmR1E6YsP1GMxBw1/eQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\3er corte\\Proyecto\\CEMPRE-master\\Datos\\Datos.csproj",
+  "projectFilePath": "C:\\Users\\juan_\\OneDrive\\Escritorio\\U2020-2\\Programacion bajo web\\ProyectoClone\\3ra entraga\\CEMPRE-master\\Datos\\Datos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juan_\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\juan_\\.nuget\\packages\\microsoft.data.sqlclient\\1.0.19249.1\\microsoft.data.sqlclient.1.0.19249.1.nupkg.sha512",

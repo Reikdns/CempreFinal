@@ -8,25 +8,42 @@ using Datos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Authorization;
 using Vista.Models;
+using Microsoft.Extensions.Options;
+using Vista.Config;
+using Vista.Services;
 
 namespace Vista.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UsuarioController : ControllerBase
     {
         private readonly UsuarioService _usuarioService;
+        private readonly JWTService _jwtService;
 
-        public UsuarioController(CempreContext context)
+        public UsuarioController(CempreContext context, IOptions<AppSetting> appSetting)
         {
             _usuarioService = new UsuarioService(context);
+            _jwtService = new JWTService(appSetting);
+        }
+
+        [AllowAnonymous]
+        [HttpPost("login")]
+        public IActionResult Login([FromBody] UsuarioInputModel model)
+        {
+            var user = _usuarioService.Validate(model.CorreoElectronico, model.ClaveDeIngreso);
+            if (user == null) return BadRequest("El correo electronico o la clave de acceso son incorrectos.");
+            var response = _jwtService.GenerateToken(user);
+            return Ok(response);
         }
 
         [HttpGet]
         public IEnumerable<UsuarioViewModel> Gets()
         {
-            var usuarios = _usuarioService.ConsultarTodos().Select(p=> new UsuarioViewModel(p));
+            var usuarios = _usuarioService.ConsultarTodos().Select(p => new UsuarioViewModel(p));
             return usuarios;
         }
 
@@ -39,12 +56,13 @@ namespace Vista.Controllers
             return usuarioViewModel;
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public ActionResult<UsuarioViewModel> Post(UsuarioInputModel usuarioInput)
         {
             Usuario usuario = MapearUsuario(usuarioInput);
             var response = _usuarioService.Guardar(usuario);
-            if (response.Error) 
+            if (response.Error)
             {
                 return BadRequest(response.Mensaje);
             }
@@ -65,7 +83,8 @@ namespace Vista.Controllers
                 Identificacion = usuarioInput.Identificacion,
                 Nombre = usuarioInput.Nombre,
                 CorreoElectronico = usuarioInput.CorreoElectronico,
-                ClaveIngreso = usuarioInput.ClaveIngreso
+                ClaveDeIngreso = usuarioInput.ClaveDeIngreso,
+                Rol = usuarioInput.Rol
             };
             return usuario;
         }

@@ -7,7 +7,9 @@ namespace Vista.Models
         public string Identificacion { get; set; }
         public string Nombre { get; set; }
         public string CorreoElectronico { get; set; }
-        public string ClaveIngreso { get; set; }
+        public string ClaveDeIngreso { get; set; }
+        public string Rol { get; set; }
+        public string Token { get; set; }
     }
 
     public class UsuarioViewModel : UsuarioInputModel
@@ -22,8 +24,10 @@ namespace Vista.Models
             Identificacion = usuario.Identificacion;
             Nombre = usuario.Nombre;
             CorreoElectronico = usuario.CorreoElectronico;
-            ClaveIngreso = usuario.ClaveIngreso;
+            ClaveDeIngreso = usuario.ClaveDeIngreso;
+            Rol = usuario.Rol;
         }
+        
     } 
 
 }
