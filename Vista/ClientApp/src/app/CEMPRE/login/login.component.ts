@@ -6,6 +6,7 @@ import { UsuarioService } from '../services/usuario.service';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { AlertModalComponent } from '../@base/alert-modal/alert-modal.component';
 import { AuthenticationService } from '../services/authentication.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -19,19 +20,45 @@ export class LoginComponent implements OnInit {
   formGroupLogin: FormGroup;
   usuario: Usuario;
   usuarioLogin: Usuario;
+  loading: false;
+  submitted: false;
+  returnUrl: string;
 
   constructor(private _CargaScripts: CargaJsService, private formBuilder: FormBuilder,
+    private route: ActivatedRoute,
+    private router: Router,
     private usuarioService: UsuarioService,
     private modalService: NgbModal,
     private authtenticationService: AuthenticationService) {
 
     this._CargaScripts.cargar(["login/login"]);
     
+    if (this.authtenticationService.currentUserValue) {
+      this.router.navigate(['/']);
+    }
    } 
 
   ngOnInit(): void {
     this.buildForm();
     this.buildFormLogin();
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+  }
+
+  get f() { return this.formGroupLogin.controls; }
+
+  onSubmit(){
+    if(this.formGroup.invalid){
+      return;
+    }
+    this.add();
+  }
+
+  SumbitLogin(){
+    if(this.formGroupLogin.invalid){
+      return;
+    }
+    console.log("aaaaaaaaaaa");
+    this.addLogin();
   }
   
   add(){
@@ -47,13 +74,13 @@ export class LoginComponent implements OnInit {
   }
 
   addLogin(){
-    
     this.authtenticationService.login(this.usuarioLogin).subscribe(p => {
       if (p != null) {
         const messageBox = this.modalService.open(AlertModalComponent)
         messageBox.componentInstance.title = "Resultado de inicio de sesion:";
         messageBox.componentInstance.message = '¡Inicio de seccion correctamente!';
         this.usuarioLogin = p;
+        this.router.navigate(['/']);
       }
     });
   }
@@ -98,19 +125,8 @@ export class LoginComponent implements OnInit {
     return this.formGroupLogin.controls;
   }
 
-  SumbitLogin(){
-    if(this.formGroupLogin.invalid){
-      return;
-    }
-    console.log("aaaaaaaaaaa");
-    this.addLogin();
-  }
 
-  onSubmit(){
-    if(this.formGroup.invalid){
-      return;
-    }
-    this.add();
-  }
+
+
 
 }

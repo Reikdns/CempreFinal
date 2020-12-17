@@ -46,18 +46,6 @@ export class AuthenticationService {
         catchError(this.handleErrorService.handleError<Usuario>('Registrar usuario', null))
       );
   }
-  
-
-
-  
-  
-  /* post(usuario: Usuario): Observable<Usuario> {
-    return this.http.post<Usuario>(this.baseUrl + 'api/Usuario', usuario)
-      .pipe(tap(_ => this.handleErrorService.log('Datos enviados')),
-        catchError(this.handleErrorService.handleError<Usuario>('Registrar usuario', null))
-      );
-  } */
-
 
   logout() {
     // remove user from local storage and set current user to null

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from '../services/authentication.service';
 import { CargaJsService } from '../services/carga-js.service';
+import { Usuario } from '../models/usuario';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-menu',
@@ -8,14 +11,22 @@ import { CargaJsService } from '../services/carga-js.service';
 })
 export class NavMenuComponent {
 
+  currentUser: Usuario;
 
-  constructor(private _CargaScripts: CargaJsService){
+  constructor(private _CargaScripts: CargaJsService, private authtenticationService: AuthenticationService, private router: Router) {
+
+    this.authtenticationService.currentUser.subscribe(x => this.currentUser = x);
 
   }
 
   ngOnInit(): void {
     this._CargaScripts.cargar(["nav-menu/nav-menu"]);
     this._CargaScripts.cargar(["General/gestionarElemento"]);
+  }
+
+  logout() {
+    this.authtenticationService.logout();
+    this.router.navigate(['/login']);
   }
 
 }

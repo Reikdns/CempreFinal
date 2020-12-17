@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './CEMPRE/login/login.component';
 import { HomeComponent } from './CEMPRE/home/home.component';
 import { InscripcionComponent } from './CEMPRE/inscripcion/inscripcion.component';
+import { AuthGuard } from './CEMPRE/services/auth.guard';
+
 
 const routes: Routes = [
   {
@@ -12,12 +14,13 @@ const routes: Routes = [
   },
   { 
     path: '', 
-    component: LoginComponent, 
+    component: HomeComponent, 
     pathMatch: 'full' 
   },
   {
     path: 'inscripcion',
-    component: InscripcionComponent
+    component: InscripcionComponent,
+    canActivate: [AuthGuard]
   }
 ]
 
