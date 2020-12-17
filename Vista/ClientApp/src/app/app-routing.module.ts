@@ -5,6 +5,7 @@ import { LoginComponent } from './CEMPRE/login/login.component';
 import { HomeComponent } from './CEMPRE/home/home.component';
 import { InscripcionComponent } from './CEMPRE/inscripcion/inscripcion.component';
 import { AuthGuard } from './CEMPRE/services/auth.guard';
+import { SolicitudesComponent } from './Cempre/solicitudes/solicitudes.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,10 @@ const routes: Routes = [
     path: 'inscripcion',
     component: InscripcionComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'solicitud',
+    component: SolicitudesComponent
   }
 ]
 

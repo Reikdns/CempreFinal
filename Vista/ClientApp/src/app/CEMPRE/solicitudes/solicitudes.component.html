@@ -1,0 +1,221 @@
+<div id="contenedorPrincipal"> 
+
+    <br>
+    
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">identificación</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Correo electronico</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Fecha de solicitud</th>
+            <th scope="col"></th>
+
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let hoja of hojasDeVida; index as i">
+                <th scope="row">{{i+1}}</th>
+                <td>{{hoja.identificacion}}</td>
+                <td>{{hoja.nombre}}</td>
+                <td>{{hoja.correoElectronico}}</td>
+                <td>{{hoja.telefono}}</td>
+                <td>{{hoja.fechaDeSolicitud | date: 'dd/MM/yyyy'}}</td>
+                <td>
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                          <button type="submit" class="btn btn-success" (click)="ver(hoja.identificacion)">Ver</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div *ngIf="obj">
+        <br>
+
+        <hr>
+    
+        <div class="row">
+            <div class="col-3">
+              <div class="form-group">
+                <h5>identificacion</h5>
+                <p>{{obj.identificacion}}</p>
+              </div>
+            </div>
+      
+            <div class="col-3">
+              <div class="form-group">
+                <h5>Nombre</h5>
+                <p>{{obj.nombre}}</p>
+              </div>
+            </div>
+    
+            <div class="col-3">
+                <div class="form-group">
+                  <h5>Primer apellido</h5>
+                  <p>{{obj.primerApellido}}</p>
+                </div>
+            </div>
+    
+            <div class="col-3">
+                <div class="form-group">
+                  <h5>Segundo apellido</h5>
+                  <p>{{obj.segundoApellido}}</p>
+                </div>
+            </div>
+          </div>
+    
+          <hr>
+    
+          <div class="row">
+            <div class="col-3">
+              <div class="form-group">
+                <h5>Fecha de nacimiento</h5>
+                <p>{{obj.fechaDeNacimiento | date: 'dd/MM/yyyy'}}</p>
+              </div>
+            </div>
+      
+            <div class="col-3">
+              <div class="form-group">
+                <h5>Lugar de nacimiento</h5>
+                <p>{{obj.lugarDeNacimiento}}</p>
+              </div>
+            </div>
+    
+            <div class="col-3">
+                <div class="form-group">
+                  <h5>Correo electrónico</h5>
+                  <p>{{obj.correoElectronico}}</p>
+                </div>
+            </div>
+    
+            <div class="col-3">
+                <div class="form-group">
+                  <h5>Telefono</h5>
+                  <p>{{obj.telefono}}</p>
+                </div>
+            </div>
+          </div>
+    
+          <hr>
+    
+          <div class="row">
+            <div class="col-3">
+              <div class="form-group">
+                <h5>Dirección actual</h5>
+                <p>{{obj.direccionActual}}</p>
+              </div>
+            </div>
+      
+            <div class="col-3">
+              <div class="form-group">
+                <h5>Ciudad actual</h5>
+                <p>{{obj.ciudadActual}}</p>
+              </div>
+            </div>
+    
+            <div class="col-3">
+                <div class="form-group">
+                  <h5>Estudios realizados</h5>
+                  <p>{{obj.estudiosRealizados}}</p>
+                </div>
+            </div>
+    
+            <div class="col-3">
+                <div class="form-group">
+                  <h5>Idiomas</h5>
+                  <p>{{obj.idiomas}}</p>
+                </div>
+            </div>
+          </div>
+    
+          <hr>
+    
+          <div class="row">
+            <div class="col-3">
+              <div class="form-group">
+                <h5>Distinciones</h5>
+                <p>{{obj.distincionesYHonoresRecibidos}}</p>
+              </div>
+            </div>
+      
+            <div class="col-3">
+              <div class="form-group">
+                <h5>Seminarios</h5>
+                <p>{{obj.seminariosYCursosAsistidos}}</p>
+              </div>
+            </div>
+    
+            <div class="col-3">
+                <div class="form-group">
+                  <h5>Proyectos</h5>
+                  <p>{{obj.proyectosRealizados}}</p>
+                </div>
+            </div>
+    
+            <div class="col-3">
+                <div class="form-group">
+                  <h5>Experiencia</h5>
+                  <p>{{obj.experienciaLaboral}}
+                </div>
+            </div>
+          </div>
+    
+          <hr>
+    
+          <div class="row">
+            <div class="col-3">
+              <div class="form-group">
+                <h5>Interes</h5>
+                <p>{{obj.areasDeInteresParaPracticas}}</p>
+              </div>
+            </div>
+      
+            <div class="col-3">
+              <div class="form-group">
+                <h5>Programa</h5>
+                <p>{{obj.programa}}</p>
+              </div>
+            </div>
+    
+            <div class="col-3">
+                <div class="form-group">
+                  <h5>Conocimiento informatico</h5>
+                  <p>{{obj.conocimientoPracticaInformatica}}</p>
+                </div>
+            </div>
+    
+            <div class="col-3">
+                <div class="form-group">
+                  <h5>Eps</h5>
+                  <p>{{obj.epsActual}}</p>
+                </div>
+            </div>
+          </div>
+    
+          <hr>  
+    
+          <div class="row">
+            <div class="col-3">
+              <div class="form-group">
+                <h5>Estado civil</h5>
+                <p>{{obj.estadoCivil}}</p>
+              </div>
+            </div>
+      
+            <div class="col-3">
+              <div class="form-group">
+                <h5>Fecha de solicitud</h5>
+                <p>{{obj.fechaDeSolicitud | date: 'dd/MM/yyyy'}}</p>
+              </div>
+            </div>
+          </div>
+          <br><br>
+    </div>
+
+</div>
+

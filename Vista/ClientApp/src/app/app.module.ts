@@ -14,6 +14,7 @@ import { InscripcionComponent } from './CEMPRE/inscripcion/inscripcion.component
 import { UsuarioService } from './CEMPRE/services/usuario.service';
 import { HandleHttpErrorService } from './CEMPRE/@base/handle-http-error-service/handle-http-error.service';
 import { JwtInterceptor } from './CEMPRE/services/jwt.interceptor';
+import { SolicitudesComponent } from './Cempre/solicitudes/solicitudes.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { JwtInterceptor } from './CEMPRE/services/jwt.interceptor';
     HomeComponent,
     LoginComponent,
     AlertModalComponent,
-    InscripcionComponent
+    InscripcionComponent,
+    SolicitudesComponent
   ],
   imports: [
     ReactiveFormsModule,

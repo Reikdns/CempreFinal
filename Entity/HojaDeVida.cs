@@ -25,7 +25,7 @@ namespace Entity
         public string Idiomas { get; set; }
         public string ProyectosRealizados { get; set; }
         public string ConocimientoPracticaInformatica { get; set; }
-        public string SeminarioYCursosAsistidos { get; set; }
+        public string SeminariosYCursosAsistidos { get; set; }
         public string DistincionesYHonoresRecibidos { get; set; }
         public string ExperienciaLaboral { get; set; }
         public string AreasDeInteresParaPracticas { get; set; }

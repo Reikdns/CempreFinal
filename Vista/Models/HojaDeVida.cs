@@ -61,7 +61,7 @@ namespace Vista.Models {
         public string ConocimientoPracticaInformatica { get; set; }
 
         [Required (ErrorMessage = "Los seminarios y los cursos asistidos son requeridos")]
-        public string SeminarioYCursosAsistidos { get; set; }
+        public string SeminariosYCursosAsistidos { get; set; }
 
         [Required (ErrorMessage = "Las distinciones y honores recibidos son requeridos")]
         public string DistincionesYHonoresRecibidos { get; set; }
@@ -97,7 +97,7 @@ namespace Vista.Models {
             Idiomas = hojaDeVida.Idiomas;
             ProyectosRealizados = hojaDeVida.ProyectosRealizados;
             ConocimientoPracticaInformatica = hojaDeVida.ConocimientoPracticaInformatica;
-            SeminarioYCursosAsistidos = hojaDeVida.SeminarioYCursosAsistidos;
+            SeminariosYCursosAsistidos = hojaDeVida.SeminariosYCursosAsistidos;
             DistincionesYHonoresRecibidos = hojaDeVida.DistincionesYHonoresRecibidos;
             ExperienciaLaboral = hojaDeVida.ExperienciaLaboral;
             AreasDeInteresParaPracticas = hojaDeVida.AreasDeInteresParaPracticas;

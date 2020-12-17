@@ -83,7 +83,7 @@ namespace Vista.Controllers {
             Idiomas=hojaDeVidaInput.Idiomas,
             ProyectosRealizados=hojaDeVidaInput.ProyectosRealizados,
             ConocimientoPracticaInformatica=hojaDeVidaInput.ConocimientoPracticaInformatica,
-            SeminarioYCursosAsistidos=hojaDeVidaInput.SeminarioYCursosAsistidos,
+            SeminariosYCursosAsistidos=hojaDeVidaInput.SeminariosYCursosAsistidos,
             DistincionesYHonoresRecibidos=hojaDeVidaInput.DistincionesYHonoresRecibidos,
             ExperienciaLaboral=hojaDeVidaInput.ExperienciaLaboral,
             AreasDeInteresParaPracticas=hojaDeVidaInput.AreasDeInteresParaPracticas

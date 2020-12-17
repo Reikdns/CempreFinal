@@ -20,7 +20,7 @@ namespace Vista.Services {
 
             // return null if user not found
             if (userLogIn == null) return null;
-            var userResponse = new UsuarioViewModel () { Nombre = userLogIn.Nombre, CorreoElectronico = userLogIn.CorreoElectronico };
+            var userResponse = new UsuarioViewModel () { Nombre = userLogIn.Nombre, CorreoElectronico = userLogIn.CorreoElectronico, Rol = userLogIn.Rol };
             
             // authentication successful so generate jwt token
             var tokenHandler = new JwtSecurityTokenHandler ();

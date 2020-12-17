@@ -35,14 +35,21 @@
             <i class="fa fa-key"></i>
             Login</a>
         </li>
-        <li class="nav-item" *ngIf="currentUser">
+        <li class="nav-item" *ngIf="currentUser != null && currentUser.rol == 'aspirante'">
           <a class="nav-link" 
             [routerLink]="['/inscripcion']"
             [routerLinkActive]="['link-active']"> 
             <i class="fa fa-pen"></i>
             Inscribirse</a>
         </li>
-        <li class="nav-item active"  *ngIf="currentUser">
+        <li class="nav-item active" *ngIf="currentUser != null && currentUser.rol == 'admin'">
+          <a class="nav-link" 
+            [routerLinkActive]="['link-active']"
+            [routerLink]="['/solicitud']"> 
+            <i class="fa fa-key"></i>
+            Solicitudes</a>
+        </li>
+        <li class="nav-item active" *ngIf="currentUser">
           <a class="nav-link" 
             [routerLinkActive]="['link-active']"
             (click)="logout()"> 
